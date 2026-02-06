@@ -4,7 +4,11 @@ import sequelize from "./config/database.js";
 import morgan from "morgan";
 import cors from "cors";
 import userRoutes from "./routes/user.routes.js";
+import customerRoutes from "./routes/customer.routes.js";
+import bookingRoutes from "./routes/booking.routes.js";
+import setupAssociations from "./models/associations.js";
 
+setupAssociations();
 dotenv.config();
 
 const app = express();
@@ -20,6 +24,8 @@ app.get("/api", (req, res) => {
 
 
 app.use("/api/users", userRoutes);
+app.use("/api/customers", customerRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 const startServer = async () => {
     try {
