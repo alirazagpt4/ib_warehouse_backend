@@ -1,0 +1,38 @@
+{
+  "name": "ib",
+  "version": "1.0.0",
+  "description": "Apis for ib_whare house in node js + express + sequelize and mu",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alirazagpt4/ib_warehouse_backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/alirazagpt4/ib_warehouse_backend/issues"
+  },
+  "homepage": "https://github.com/alirazagpt4/ib_warehouse_backend#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
+    "mysql2": "^3.16.3",
+    "nodemon": "^3.1.11",
+    "pm2": "^6.0.14",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.5"
+  }
+}
