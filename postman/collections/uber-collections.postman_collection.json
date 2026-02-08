@@ -1,0 +1,460 @@
+{
+  "info": {
+    "_postman_id": "8c09cd2a-d368-4ea8-a715-996ff4b61fa9",
+    "name": "uber-collections",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "uber-user-apis",
+      "item": [
+        {
+          "name": "Register user",
+          "id": "161351dd-9a96-42ce-ac85-19ed496866df",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fullname\":{\r\n        \"firstname\":\"AliRaza\",\r\n        \"lastname\" : \"Afzal\"\r\n    },\r\n    \"email\":\"ali.4aug24webgpt@gmail.com\",\r\n    \"password\":\"Ali-Raza-25*\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/users/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login user",
+          "id": "d3832262-6f8e-490b-9260-3f245b76ba6e",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n    \"email\":\"ali.4aug24webgpt@gmail.com\",\r\n    \"password\":\"Ali-Raza-25*\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Profile",
+          "id": "cc73a620-2121-436d-aff8-b0a24813fef8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QxYjY1ODY1NDlmNGI2NjY5NjI2NTIiLCJpYXQiOjE3NDE3OTcwNDgsImV4cCI6MTc0MTg4MzQ0OH0.zqwSpbY7U6LFjuoW16tAjiKr0f-p-0P1eIr2c89Xilw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n    \"email\":\"ali.4aug24webgpt@gmail.com\",\r\n    \"password\":\"Ali-Raza-25*\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/users/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "users",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User logout",
+          "id": "5623bcf5-efb3-452d-b3be-549cd61524a4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QxYjY1ODY1NDlmNGI2NjY5NjI2NTIiLCJpYXQiOjE3NDE3OTcwNDgsImV4cCI6MTc0MTg4MzQ0OH0.zqwSpbY7U6LFjuoW16tAjiKr0f-p-0P1eIr2c89Xilw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n    \"email\":\"ali.4aug24webgpt@gmail.com\",\r\n    \"password\":\"Ali-Raza-25*\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/users/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "users",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "a51885ed-ab81-4c3e-9911-cf63a0fa7094"
+    },
+    {
+      "name": "uber-maps-apis",
+      "item": [
+        {
+          "name": "get_suggestions",
+          "id": "4244a5d4-e758-45c6-a23e-542004b1278f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QxMGJiOGQzMmM5ZDZjODJjMzljMzgiLCJpYXQiOjE3NDE3NTMyNzMsImV4cCI6MTc0MTgzOTY3M30.demR63EPqkFBRlhT42BleWROk91Wr28X52ozt3BpLfA",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fullname\" :{\r\n        \"firstname\":\"Ali\",\r\n        \"lastname\":\"Raza\"\r\n    },\r\n    \"email\":\"infoaliraza22@gmail.com\",\r\n    \"password\":\"Ali-Raza-25*\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/maps/get-suggestions?input=khurrianwala",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "maps",
+                "get-suggestions"
+              ],
+              "query": [
+                {
+                  "key": "input",
+                  "value": "khurrianwala"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get_coordinates",
+          "id": "f410985d-9692-473f-bdd2-2287853e29db",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QxMGJiOGQzMmM5ZDZjODJjMzljMzgiLCJpYXQiOjE3NDE3NTMyNzMsImV4cCI6MTc0MTgzOTY3M30.demR63EPqkFBRlhT42BleWROk91Wr28X52ozt3BpLfA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4000/maps/get-coordinates?address=khurrianwala",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "maps",
+                "get-coordinates"
+              ],
+              "query": [
+                {
+                  "key": "address",
+                  "value": "khurrianwala"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get_distance_time",
+          "id": "517d0662-2d5f-4ecd-a551-bd152e8775fd",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QxMGJiOGQzMmM5ZDZjODJjMzljMzgiLCJpYXQiOjE3NDE3NTMyNzMsImV4cCI6MTc0MTgzOTY3M30.demR63EPqkFBRlhT42BleWROk91Wr28X52ozt3BpLfA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4000/maps/get-distance-time?origin=khurrianwala&destination=lahore",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "maps",
+                "get-distance-time"
+              ],
+              "query": [
+                {
+                  "key": "origin",
+                  "value": "khurrianwala"
+                },
+                {
+                  "key": "destination",
+                  "value": "lahore"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "f2cfc9c0-adef-4b6b-b952-597acb807df8"
+    },
+    {
+      "name": "uber-captain-apis",
+      "item": [
+        {
+          "name": "Captain Register",
+          "id": "6cfa176e-6420-4425-8e49-78edaa8536cd",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fullname\":{\r\n        \"firstname\":\"Ali Raza\",\r\n        \"lastname\":\"Afzal\"\r\n    },\r\n    \"email\":\"aalleeyyafzal21@gmail.com\",\r\n    \"password\":\"AliRaza25**\",\r\n    \"vehicle\":{\r\n        \"color\":\"black\",\r\n        \"plate\":\"MP 23 RT XX 456\",\r\n        \"capacity\":4,\r\n        \"vehicleType\":\"car\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/captains/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "captains",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Captains login",
+          "id": "fdc6902d-3a74-4c90-aed1-87870013d6d6",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QxYjhmNzY1NDlmNGI2NjY5NjI2NWQiLCJpYXQiOjE3NDE3OTc3NzksImV4cCI6MTc0MTg4NDE3OX0.zeO3sjDJ4vlM5GKQOM5O8z-okIj6P1_SLKVartmVzsk",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"aalleeyyafzal21@gmail.com\",\r\n    \"password\":\"AliRaza25**\"\r\n   \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/captains/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "captains",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Captains profile",
+          "id": "a75c4a98-3c58-4fd2-9691-5f27d36da1f6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QxYjhmNzY1NDlmNGI2NjY5NjI2NWQiLCJpYXQiOjE3NDE3OTc3NzksImV4cCI6MTc0MTg4NDE3OX0.zeO3sjDJ4vlM5GKQOM5O8z-okIj6P1_SLKVartmVzsk",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"aalleeyyafzal21@gmail.com\",\r\n    \"password\":\"AliRaza25**\"\r\n   \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/captains/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "captains",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Captains logout",
+          "id": "8abdee97-f679-4dfa-9638-ae7fd6abb219",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2QxYjhmNzY1NDlmNGI2NjY5NjI2NWQiLCJpYXQiOjE3NDE3OTc3NzksImV4cCI6MTc0MTg4NDE3OX0.zeO3sjDJ4vlM5GKQOM5O8z-okIj6P1_SLKVartmVzsk",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"aalleeyyafzal21@gmail.com\",\r\n    \"password\":\"AliRaza25**\"\r\n   \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/captains/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "captains",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "b6a14f5a-6c24-4806-a9fc-91bea763afae"
+    },
+    {
+      "name": "uber-rides-apis",
+      "item": [
+        {
+          "name": "createRide",
+          "id": "e0dc4bd8-aabd-4c49-8caf-d7ddcf64d6ee",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer ",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:4000/rides/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "4000",
+              "path": [
+                "rides",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "6a343dfa-153a-47b3-a876-1a917de5574f"
+    }
+  ]
+}

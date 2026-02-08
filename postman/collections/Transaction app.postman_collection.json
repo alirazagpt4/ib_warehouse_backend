@@ -1,0 +1,47 @@
+{
+  "info": {
+    "_postman_id": "a650b8dd-18d6-4b2f-8c60-8d32d3ce4369",
+    "name": "Transaction app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "id": "2099903c-08d6-44d0-9cfd-d71441a67989",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"to\":\"ali.4aug24webgpt@gmail.com\",\r\n    \"subject\": \"Ali Raza\",\r\n    \"text\": \"Hi there we are inviting you\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/send-mail",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "send-mail"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "15f68f05-ab46-441c-a0dd-ca0bd26f6ed9",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

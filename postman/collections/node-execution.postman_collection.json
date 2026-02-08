@@ -1,0 +1,153 @@
+{
+  "info": {
+    "_postman_id": "82982e1a-8fac-4fcf-a421-4bb71f06bfb7",
+    "name": "node-execution",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "signup req",
+      "id": "c59d1d23-e76e-4640-bf8e-bbba7a810156",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Ahmed\",\r\n    \"email\" :\"ah@gmail.com\",\r\n    \"password\" :\"Ahmad26\",\r\n    \"role\":\"admin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login req",
+      "id": "6ea3de62-1e1c-444e-86da-8b904dca1a5f",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWRhOTM5ZjU0Nzg1NzI2MjE4OThhMyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzYzNTY0OTY5fQ.jOceD5XaD4h_6i1YaS0lxLD5OILP-M7Ku1bSekJ31Bw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\r\n\"email\" :\"ah@gmail.com\",\r\n\"password\" :\"Ahmad26\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user profile with middleware",
+      "id": "b89e9d76-91d9-45ff-b920-f9c8ba7c7d80",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWUwNjFiNzQzMzUzOTVlNmViZmY3ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MzU3NTM3OH0.5K-zADDsyUJ4g806mipw-0w-Co_emiUmPlFGHwi2tjg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\r\n\"email\" :\"ali.4aug24webgpt@gmail.com\",\r\n\"password\" :\"AliRaza26*\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get users by admin",
+      "id": "146af7db-9dcf-4f8e-94fe-9525212d5423",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWUwNjFiNzQzMzUzOTVlNmViZmY3ZSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2MzU3NTM3OH0.5K-zADDsyUJ4g806mipw-0w-Co_emiUmPlFGHwi2tjg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/users/admin/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "admin",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

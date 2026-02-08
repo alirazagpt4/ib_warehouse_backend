@@ -1,0 +1,338 @@
+{
+  "info": {
+    "_postman_id": "73668c18-33b3-460e-879f-08771d47fd9b",
+    "name": "Professional-Ecom-app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Api Working Req",
+      "id": "f4cc5e37-fda0-4235-8bec-781d11f9cda8",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update user",
+      "id": "29da69d4-eadb-413f-b040-62f0693adc35",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"name\": \"Ali Raza\",\r\n    \"email\": \"infoali@gmail.com\",\r\n    \"password\": \"AliRaza123*\",\r\n    \"role\":\"admin\"\r\n\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/68a9734b547ffe85ae28b736",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "68a9734b547ffe85ae28b736"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get user by id",
+      "id": "4032ef90-3441-49ec-9f91-6961a633d5fe",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"name\": \"Ali Raza\",\r\n    \"email\": \"infoali@gmail.com\",\r\n    \"password\": \"AliRaza123*\",\r\n    \"role\":\"admin\"\r\n\r\n  }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/68a9734b547ffe85ae28b736",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "68a9734b547ffe85ae28b736"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all users",
+      "id": "f4e4976d-9d5f-4524-b607-d471e1b3fb96",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"name\": \"Ali Raza\",\r\n    \"email\": \"infoali@gmail.com\",\r\n    \"password\": \"AliRaza123*\",\r\n    \"role\":\"admin\"\r\n\r\n  }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create user",
+      "id": "2f89fdbe-c05c-413e-a477-1a181ece5619",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjVkN2E4NWIwZjRiZDMzYzYxZWRlYiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU2NzQ3NzAxfQ.r4uA2-D98DgLjXQChGBjiLoIZkxuW2erCkQDZFj6-H4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWY0Y2M0ZGZmNjg4MTNiNTEwOGQyYyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU2NTQ0ODU4fQ.tVA0d8_x01fCNAtu70ARagJgi_FIWjgSySY4fl8DD5g",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \r\n    \"email\": \"ali.4aug24webgpt@gmail.com\",\r\n    \"otp\":\"628895\",\r\n    \"newPassword\" : \"AliRaza22@@\"\r\n    \r\n   \r\n\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products?sortBy=price&order=desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "sortBy",
+              "value": "price"
+            },
+            {
+              "key": "order",
+              "value": "desc"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete user",
+      "id": "d7b333ce-d41f-4bf7-9f90-a003f7eabccb",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"name\": \"Ali Raza\",\r\n    \"email\": \"infoali@gmail.com\",\r\n    \"password\": \"AliRaza123*\",\r\n    \"role\":\"admin\"\r\n\r\n  }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/68a979f1a04c9ba05f43ecf8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "68a979f1a04c9ba05f43ecf8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "6217dfd3-72f3-47e1-9aff-0beece3367f4",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Sorting",
+      "id": "a68aa4c2-30a1-42c9-830c-e36e6b4cbb76",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjVkN2E4NWIwZjRiZDMzYzYxZWRlYiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU2NzQ3NzAxfQ.r4uA2-D98DgLjXQChGBjiLoIZkxuW2erCkQDZFj6-H4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWY0Y2M0ZGZmNjg4MTNiNTEwOGQyYyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU2NTQ0ODU4fQ.tVA0d8_x01fCNAtu70ARagJgi_FIWjgSySY4fl8DD5g",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \r\n    \"email\": \"ali.4aug24webgpt@gmail.com\",\r\n    \"otp\":\"628895\",\r\n    \"newPassword\" : \"AliRaza22@@\"\r\n    \r\n   \r\n\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products?sortBy=price&order=desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "sortBy",
+              "value": "price"
+            },
+            {
+              "key": "order",
+              "value": "desc"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pagination , Searching and Sorting ",
+      "id": "ff03dc8f-9606-486e-8255-45c26729f562",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjVkN2E4NWIwZjRiZDMzYzYxZWRlYiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU2NzQ3NzAxfQ.r4uA2-D98DgLjXQChGBjiLoIZkxuW2erCkQDZFj6-H4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YWY0Y2M0ZGZmNjg4MTNiNTEwOGQyYyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU2NTQ0ODU4fQ.tVA0d8_x01fCNAtu70ARagJgi_FIWjgSySY4fl8DD5g",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \r\n    \"email\": \"ali.4aug24webgpt@gmail.com\",\r\n    \"otp\":\"628895\",\r\n    \"newPassword\" : \"AliRaza22@@\"\r\n    \r\n   \r\n\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/products?page=2&category=Electronics&sortBy=price&order=desc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "2"
+            },
+            {
+              "key": "category",
+              "value": "Electronics"
+            },
+            {
+              "key": "sortBy",
+              "value": "price"
+            },
+            {
+              "key": "order",
+              "value": "desc"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "info": {
+    "_postman_id": "8691f5df-5afa-48fa-8591-b6b2c19c7854",
+    "name": "Connecting Mongo Db",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "id": "0753394c-98c4-4f43-ad92-d6b7553fa5f9",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

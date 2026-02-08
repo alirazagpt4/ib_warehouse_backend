@@ -1,0 +1,561 @@
+{
+  "info": {
+    "_postman_id": "501e21f5-6f87-4623-97d9-19be478eac48",
+    "name": "IB backend APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User Module",
+      "item": [
+        {
+          "name": "Register user req",
+          "id": "9d71f237-a0ab-40af-9e81-df7060a05490",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"test\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"test\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login request",
+          "id": "c37289eb-72cd-4850-ba9c-a5bf0cf0e3cd",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"test\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get personal detail",
+          "id": "54785883-89a0-4ff7-8e84-6d5b151575bb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"test\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users/personal-info",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "personal-info"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "d8d112fc-11d8-45eb-a45e-821c6f88969b"
+    },
+    {
+      "name": "Customer Module",
+      "item": [
+        {
+          "name": "create Customer Api",
+          "id": "278e80a3-5cc9-403b-a4b0-a5c0240a97f6",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Ali Raza\",\r\n    \"phone\":\"03144965144\",\r\n    \"brandName\":\"ARE workshop\",\r\n    \"address\":\"xyz\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/customers/create-customer",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "customers",
+                "create-customer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all customers with searching and pagination",
+          "id": "0487f4fd-fe51-4daf-95c4-86508835f31f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Ali Raza\",\r\n    \"phone\":\"03144965144\",\r\n    \"brandName\":\"ARE workshop\",\r\n    \"address\":\"xyz\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/customers/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "customers",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update customer by id",
+          "id": "087c4b1d-05ec-4692-9bb5-c1ea0d0961d3",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Ali Raza Afzal\",\r\n    \"phone\":\"03144965144\",\r\n    \"brandName\":\"ARE workshop\",\r\n    \"address\":\"xyz\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/customers/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "customers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete customers by id",
+          "id": "2790e1f1-a963-48fd-9b8f-526f5b3a75ee",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Ali Raza Afzal\",\r\n    \"phone\":\"03144965144\",\r\n    \"brandName\":\"ARE workshop\",\r\n    \"address\":\"xyz\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/customers/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "customers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "a759a93e-335c-4fd9-8986-adbce150aada"
+    },
+    {
+      "name": "Booking and Status",
+      "item": [
+        {
+          "name": "Booking Create Api",
+          "id": "9cc78c30-ecd9-46f7-8793-168a8aa5d3c7",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"customerId\": 2,\r\n    \"description\": \"3 Cartons of Apple iPhones - Origin: China (Air Freight)\",\r\n    \"weight\": 15.6,\r\n    \"volume\": \"0.5 CBM\",\r\n    \"noOfCartons\": 3,\r\n    \"hsCode\": \"8517.13\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bookings/create-booking",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bookings",
+                "create-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Booking and status",
+          "id": "fcfc00b5-8709-4554-ba30-380cdc0a0a06",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"customerId\": 2,\r\n    \"description\": \"3 Cartons of Apple iPhones - Origin: China (Air Freight)\",\r\n    \"weight\": 15.6,\r\n    \"volume\": \"0.5 CBM\",\r\n    \"noOfCartons\": 3,\r\n    \"hsCode\": \"8517.13\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bookings/create-booking",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bookings",
+                "create-booking"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get All bookings",
+          "id": "2b8342fa-855f-446f-aea9-b379db1f2307",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"customerId\": 2,\r\n    \"description\": \"3 Cartons of Apple iPhones - Origin: China (Air Freight)\",\r\n    \"weight\": 15.6,\r\n    \"volume\": \"0.5 CBM\",\r\n    \"noOfCartons\": 3,\r\n    \"hsCode\": \"8517.13\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bookings/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bookings",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get Booking by id",
+          "id": "c7fb7ab9-441e-4616-8214-ab58b8923d5e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"customerId\": 2,\r\n    \"description\": \"3 Cartons of Apple iPhones - Origin: China (Air Freight)\",\r\n    \"weight\": 15.6,\r\n    \"volume\": \"0.5 CBM\",\r\n    \"noOfCartons\": 3,\r\n    \"hsCode\": \"8517.13\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bookings/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bookings",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a booking by id",
+          "id": "58af608a-e838-4a6c-9c79-16daac332e3c",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"customerId\": 2,\r\n    \"description\": \"3 Cartons of Apple iPhones - Origin: China (Air Freight)\",\r\n    \"weight\": 15.6,\r\n    \"volume\": \"0.5 CBM\",\r\n    \"noOfCartons\": 3,\r\n    \"hsCode\": \"8517.13\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bookings/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bookings",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get Booking by Customer ID",
+          "id": "e2c4fd00-5785-4363-8841-6090dd340a8f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"customerId\": 2,\r\n    \"description\": \"3 Cartons of Apple iPhones - Origin: China (Air Freight)\",\r\n    \"weight\": 15.6,\r\n    \"volume\": \"0.5 CBM\",\r\n    \"noOfCartons\": 3,\r\n    \"hsCode\": \"8517.13\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bookings/?customerId=2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bookings",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "customerId",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "81dc2313-d8ed-4892-aa16-17aef9bb76f9"
+    }
+  ]
+}

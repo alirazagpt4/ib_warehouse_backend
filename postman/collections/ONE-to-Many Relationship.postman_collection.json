@@ -1,0 +1,89 @@
+{
+  "info": {
+    "_postman_id": "168bf056-786d-474f-abc4-2297dc137dea",
+    "name": "ONE-to-Many Relationship",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "id": "16c3dc1d-a429-4f86-b90e-ebd4f4d2102d",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"AliRaza\",\r\n    \"email\":\"ali@gmail.com\"\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/customer/create-cust",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "customer",
+            "create-cust"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "d8021147-8350-413f-8d34-9ccb07a43877",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"itemName\":\"IPhone 16 Pro Max\",\r\n    \"amount\" : 500000,\r\n    \"status\":\"Pending\",\r\n    \"Customer\":\"6819bd43b6090bd2799b5a68\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders/create-orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "orders",
+            "create-orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "0f291a34-9534-4157-9065-af65a91f9032",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "f1c96298-7f2e-4c5e-b8c3-61f84b3ba408",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

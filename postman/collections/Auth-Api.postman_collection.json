@@ -1,0 +1,18 @@
+{
+  "info": {
+    "_postman_id": "802e9d3c-0790-47b4-9022-26595c759467",
+    "name": "Auth-Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "id": "5b77e037-0d80-4768-a741-b2826a105a36",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

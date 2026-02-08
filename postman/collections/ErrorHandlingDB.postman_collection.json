@@ -1,0 +1,58 @@
+{
+  "info": {
+    "_postman_id": "81f9c7a5-da21-45c9-9582-9838371a47a4",
+    "name": "ErrorHandlingDB",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "id": "3e635bd6-549e-4b99-a1f6-b52235e73fff",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "b66cbf70-7c6c-4a2d-85a5-4a8d0f4fb3c2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"aliraza@gmail.com\",\r\n    \"password\":\"alalala\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "c40dad8a-e325-4b8e-96c2-784c56413e4c",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "info": {
+    "_postman_id": "9a8d014e-a7f8-46fb-bb24-fd83230b975d",
+    "name": "Sales_Testing_Apis",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "testing apis",
+      "id": "28796bbd-f874-41ac-9a55-6cfdb6634856",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "customers",
+      "id": "373966ea-8af1-41f8-8278-ca08ad57d0f6",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0NzU0NTQ4fQ.2TGr-7y0I9-Nmyfggr9j_1lG2wEAgcmqDRbvtHqNn2Q",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customer_name\": \"Ahmed Farm\",\r\n    \"contact\": \"03004434567\",\r\n    \"area\": \"Khurrianwala\",\r\n    \"tehsil\": \"Faisalabad\",\r\n    \"bags_potential\": 500,\r\n    \"type\": \"Farmer\" \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/customers/create-customer",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "customers",
+            "create-customer"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login admin request",
+      "id": "459e8d66-a2a2-4d99-9b60-412b726c2bda",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"ali@gmail.com\",\r\n    \"password\": \"AliRaza223\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/admin/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "admin",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Visit",
+      "id": "a18e5554-36ab-414c-9e1f-cc4fc2a0967c",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0NzY4OTA5fQ.BLVXJxXyVGZxbmJbHWCcBFNj-CHc0nGc342RQu-ywzM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customer_id\": 1, \r\n          \r\n    \"latitude\": 31.4501,\r\n    \"longitude\": 74.3400,\r\n    \"purpose\": \"Visit\", \r\n    \"date\": \"2025-12-03\",\r\n    \"remarks\": \"Final testing payload for visit creation.\",\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/visits/create-visit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "visits",
+            "create-visit"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get + search",
+      "id": "3b385321-35ca-41bd-b1ea-8ab427d64579",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "update customer by id",
+      "id": "8ed056e0-b689-4301-bfcd-afcd3a775e9b",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhbGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY1MjAzMjEwLCJleHAiOjE3NjUyODk2MTB9.WuAQtf5Fb9c7SkE6VKGkPWNGVtQMevhq0Jx8uR_Yv18",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \r\n    \"tehsil\": \"FAISALABADII\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/customers/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "customers",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register",
+      "id": "50251888-250d-4caa-b61a-3e915a97e618",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhbGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY1NTQ4MDY1LCJleHAiOjE3NjU2MzQ0NjV9.7pkrYDAU7fS_9YGnWjtycKGGQxVhIcZEf4i3Y3FvDE8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"ali1@gmail.com\",\r\n    \"name\": \"Ali\",\r\n    \"password\":\"AliRaza223\",\r\n    \"role\": \"user\" ,\r\n    \"city_id\" : 1,\r\n    \"designation\" : \"Sales Officer\",\r\n    \"referred_to\" : \"Sales Executive\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete customer",
+      "id": "97cd8f03-9ba6-46ab-bc78-79aa8f7fb98f",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhbGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY1MTk0NTEwfQ.Q46iwjutvC5AzhSildZpm47mLgav42P03S2w0VpH2JU",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/customers/4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "customers",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login  request",
+      "id": "6865b2b8-f53e-4657-8623-bd5410d86530",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"ali@gmail.com\",\r\n    \"password\": \"AliRaza223\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/admin/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "admin",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all users + search",
+      "id": "acb43bef-4e59-4871-b856-c3719aa6346a",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhbGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY1NTQ4MDY1LCJleHAiOjE3NjU2MzQ0NjV9.7pkrYDAU7fS_9YGnWjtycKGGQxVhIcZEf4i3Y3FvDE8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update user",
+      "id": "c863e759-0c00-4c7b-9474-d02a00911d44",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhbGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY1MjIzMzMwLCJleHAiOjE3NjUzMDk3MzB9.5gYf3x5HfmAVuJuau8mYax7JyAHIqxJWpjo_7XFWG9c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Ali Raza\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/users/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete user",
+      "id": "84702a67-085e-4f5f-8d6f-56ab48e51bc6",
+      "request": {
+        "method": "DELETE",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "KPIS",
+      "id": "0f6e7fdc-4456-4b9f-906d-b47d502b72f9",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Reports Apis",
+      "id": "a4971e53-2117-4500-902f-ba91cff24ddb",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "View Single User",
+      "id": "cc802016-891b-4b66-87b6-2bb16405e083",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhbGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzY1NTQ4MDY1LCJleHAiOjE3NjU2MzQ0NjV9.7pkrYDAU7fS_9YGnWjtycKGGQxVhIcZEf4i3Y3FvDE8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/users/7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "users",
+            "7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "5d9904ec-9a73-4629-ae27-98f96f20a69c",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

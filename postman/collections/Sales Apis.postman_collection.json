@@ -1,0 +1,809 @@
+{
+  "info": {
+    "_postman_id": "d9f4714a-04dc-4445-ba3c-32cf2274a40d",
+    "name": "Sales Apis",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register req",
+      "id": "fc83cef2-c431-4c9c-8110-b6183bc61f03",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjUzMTAwNDMsImV4cCI6MTc2NTM5NjQ0M30.0iJbFpwkUQGor1kTnpzVBe4Gvh9vVjosTWcnMc7k8cY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"aliiiii\",\r\n    \"email\": \"aliiiii@gmail.com\",\r\n    \"password\" : \"aliiiii\",\r\n    \"role\": \"user\"\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/users/register",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login Request",
+      "id": "5aa483f5-8170-4647-8b47-2b08846ab74b",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0MDkzNzU4fQ.SulcD4nnyfuJCaRmLyxo_jBZt8eB_0dxO88YAhxoSxw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"user1\",\r\n    \"password\" : \"user1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/users/login",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Protected Route",
+      "id": "26a282dc-4cde-4fe0-a096-6b2a96f9303d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0MDUxMjE5fQ.w7w_e73FYvNCBKzi1GsuPYSJ8hm100OvVnTToZI06WQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Ali Raza\",\r\n    \"email\" :\"ali.4aug24webgpt@gmail.com\",\r\n    \"password\" :\"AliRaza26*\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/users/protected",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "protected"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "App Testing Api",
+      "id": "5be47297-fa65-4f8e-a443-148f337e64f1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0MDUxMjE5fQ.w7w_e73FYvNCBKzi1GsuPYSJ8hm100OvVnTToZI06WQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Ali Raza\",\r\n    \"email\" :\"ali.4aug24webgpt@gmail.com\",\r\n    \"password\" :\"AliRaza26*\"\r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Start Day Api",
+      "id": "fe15ee55-0e8e-45a5-99bb-5bbc59517083",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0MDkwNTI3fQ.VXQLfGEYzjBUv0SD_SVnuBfRKfoCyCCGTzu1hn7SSgw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "{\n    \"location\": {\n        \"latitude\": 31.484433056084054,\n        \"longitude\": 73.26619225845846,\n        \"timeStamp\": \"2025-11-25T13:04:31.293Z\"\n    },\n    \"meterReadings\": \"2887788688008544\"\n}",
+              "type": "text"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "src": "/D:/Downloads/—Pngtree—vector user management icon_3773556.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/startday",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "startday"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Customers",
+      "id": "ae56d936-5176-4d06-b469-e40da9e328e3",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0NzY2NTE4fQ.hMHPtYBVSuj6n_pMIokTvSyGwQ6rDbcJdDb3v-EZ2ZQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customer_name\": \"Arza\", // LAZMI FIELD\r\n    \"contact\": \"03001123324\",         // LAZMI FIELD\r\n    \"area\": \"Model Town\",\r\n    \"tehsil\": \"City\",\r\n    \"bags_potential\": 800,\r\n    \"type\": \"Dealer\" // LAZMI FIELD\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/customers/create-customer",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "customers",
+            "create-customer"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Start Visit",
+      "id": "f7fa2cc0-b5b5-4ec5-a8fa-aa175c5a14ad",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0NzY2NTE4fQ.hMHPtYBVSuj6n_pMIokTvSyGwQ6rDbcJdDb3v-EZ2ZQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"customer_name\": \"Arza\", // LAZMI FIELD\r\n    \"contact\": \"03001123324\",         // LAZMI FIELD\r\n    \"area\": \"Model Town\",\r\n    \"tehsil\": \"City\",\r\n    \"bags_potential\": 800,\r\n    \"type\": \"Dealer\" // LAZMI FIELD\r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/visits/create-visit",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "visits",
+            "create-visit"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Customers List",
+      "id": "e2512a3a-856b-4708-94bf-1426307f2229",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0Nzg2NzQxfQ.SLARP3PVw6npHxrD766dAtAs2UJy-i4A_urpCqenxX8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"ali.4aug24webgpt@gmail.com\",\r\n    \"password\" : \"Ali Raza\"\r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/customers/",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "customers",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Customers Search",
+      "id": "f61fd2aa-85e5-470c-974e-3f7fcf0063bd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGkuNGF1ZzI0d2ViZ3B0QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY0Nzg2NzQxfQ.SLARP3PVw6npHxrD766dAtAs2UJy-i4A_urpCqenxX8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"ali.4aug24webgpt@gmail.com\",\r\n    \"password\" : \"Ali Raza\"\r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/customers/?search=Arza",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "customers",
+            ""
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "Arza"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login Admin",
+      "id": "3dc8c723-4d2e-4241-b7d3-04c37b167037",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\" : \"admin\"\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/users/admin/login",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "admin",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update customer",
+      "id": "6741169e-25ea-48a5-9372-b1043ff0946e",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjUzMTAwNDMsImV4cCI6MTc2NTM5NjQ0M30.0iJbFpwkUQGor1kTnpzVBe4Gvh9vVjosTWcnMc7k8cY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n  \"customer_name\":\"Ali Raza Engineers\",\r\n    \"tehsil\": \"FAISALABAD\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/customers/1",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "customers",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Customer",
+      "id": "6156b35d-c469-4de1-8d4a-cc25d12da0e7",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjUzMTAwNDMsImV4cCI6MTc2NTM5NjQ0M30.0iJbFpwkUQGor1kTnpzVBe4Gvh9vVjosTWcnMc7k8cY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n  \"customer_name\":\"Ali Raza Engineers\",\r\n    \"tehsil\": \"FAISALABAD\"\r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/customers/1",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "customers",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Users",
+      "id": "7e8d5f3c-9ae9-4d56-878e-e6b7fefcb274",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjUzMTAwNDMsImV4cCI6MTc2NTM5NjQ0M30.0iJbFpwkUQGor1kTnpzVBe4Gvh9vVjosTWcnMc7k8cY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"aliiiii\",\r\n    \"email\": \"aliiiii@gmail.com\",\r\n    \"password\" : \"aliiiii\",\r\n    \"role\": \"admin\"\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/users/4",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Users",
+      "id": "9e4e403f-5109-4cf0-bc28-a17376263355",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjU2MDc1MzAsImV4cCI6MTc2NTY5MzkzMH0.98BBOThslFJDB7Oxc7_-7c8Ho1RbbP0oxBD3Kqw1TqQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"aliiiii\",\r\n    \"email\": \"aliiiii@gmail.com\",\r\n    \"password\" : \"aliiiii\",\r\n    \"role\": \"admin\"\r\n    \r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/users/",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete User",
+      "id": "9d63dbd5-5961-418b-95cf-1a4b0baa794b",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjUzMTAwNDMsImV4cCI6MTc2NTM5NjQ0M30.0iJbFpwkUQGor1kTnpzVBe4Gvh9vVjosTWcnMc7k8cY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/api/users/4",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dashboard KPIs",
+      "id": "e9e70326-8dcf-44df-b5c5-5f6946eea896",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjUzMTAwNDMsImV4cCI6MTc2NTM5NjQ0M30.0iJbFpwkUQGor1kTnpzVBe4Gvh9vVjosTWcnMc7k8cY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"aliiiii\",\r\n    \"email\": \"aliiiii@gmail.com\",\r\n    \"password\" : \"aliiiii\",\r\n    \"role\": \"admin\"\r\n    \r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/kpis",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "kpis"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reports",
+      "id": "c187d9d2-c0b7-4309-9a04-89c3f8c00419",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjUzMTAwNDMsImV4cCI6MTc2NTM5NjQ0M30.0iJbFpwkUQGor1kTnpzVBe4Gvh9vVjosTWcnMc7k8cY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"aliiiii\",\r\n    \"email\": \"aliiiii@gmail.com\",\r\n    \"password\" : \"aliiiii\",\r\n    \"role\": \"admin\"\r\n    \r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/reports/detailed?start=2025-12-01&end=2025-12-09",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "reports",
+            "detailed"
+          ],
+          "query": [
+            {
+              "key": "start",
+              "value": "2025-12-01"
+            },
+            {
+              "key": "end",
+              "value": "2025-12-09"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cities Api",
+      "id": "a0fe3c66-f103-4e93-ac53-d1b8744bb6d4",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjUzMTAwNDMsImV4cCI6MTc2NTM5NjQ0M30.0iJbFpwkUQGor1kTnpzVBe4Gvh9vVjosTWcnMc7k8cY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"aliiiii\",\r\n    \"email\": \"aliiiii@gmail.com\",\r\n    \"password\" : \"aliiiii\",\r\n    \"role\": \"admin\"\r\n    \r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/cities",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "cities"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View Single User",
+      "id": "8220ffea-162d-4696-90c5-056542f947c4",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjU2MDc1MzAsImV4cCI6MTc2NTY5MzkzMH0.98BBOThslFJDB7Oxc7_-7c8Ho1RbbP0oxBD3Kqw1TqQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"aliiiii\",\r\n    \"email\": \"aliiiii@gmail.com\",\r\n    \"password\" : \"aliiiii\",\r\n    \"role\": \"admin\"\r\n    \r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/users/3",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "summary report",
+      "id": "16782dd5-9f8b-4694-aec6-aadc792086cb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjkxNzU5NTksImV4cCI6MTc2OTI2MjM1OX0.AgGsEqILWGLKGjpMScHoByrBqPeh-V6ZCPmGIRMPNe4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\" : \"admin\"\r\n    \r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/reports/summary-report?fromDate=2026-01-21&toDate=2026-01-21",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "reports",
+            "summary-report"
+          ],
+          "query": [
+            {
+              "key": "fromDate",
+              "value": "2026-01-21"
+            },
+            {
+              "key": "toDate",
+              "value": "2026-01-21"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer"
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "87878dfd-f6a1-4faa-a31b-bc47d3aae766",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "14fb7f5c-9afc-403e-9381-7ebae3e01f97",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "abf4ab4b-26ff-4ba4-8eb8-6df0d862654d",
+      "key": "baseURL",
+      "value": ""
+    }
+  ]
+}

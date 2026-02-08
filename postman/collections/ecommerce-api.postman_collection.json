@@ -1,0 +1,569 @@
+{
+  "info": {
+    "_postman_id": "98857251-65e1-4de4-8747-6072d656deee",
+    "name": "ecommerce-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "login request of users",
+      "id": "6585c084-c0eb-4624-869e-93c52f8adb35",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/users/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register request of users",
+      "id": "288752a1-4588-486d-a827-fd1be22f19db",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Ali\",\r\n    \"email\" :\"ali@gmail.com\",\r\n    \"password\" : \"AliRaza223\",\r\n    \"role\" : \"admin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user profile",
+      "id": "f95978ed-5aff-4380-8eae-f8343ac048de",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTE1MH0._MvLPs2nDp7pKT7DOz7aM1DysFhoQkbjSgbrFTTJIs4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTAxMH0.ugTepZzvRHN-u8VJ_TYbFWKttoG7r_TfB7EVcMalL50",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"ali@gmail.com\",\r\n    \"password\" : \"AliRaza223\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "users",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create products request ",
+      "id": "437e5dd4-d00c-4d5a-bf4e-1d48ade4f01e",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTE1MH0._MvLPs2nDp7pKT7DOz7aM1DysFhoQkbjSgbrFTTJIs4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTAxMH0.ugTepZzvRHN-u8VJ_TYbFWKttoG7r_TfB7EVcMalL50",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "Samsung S24 Ultra",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Samsung S24 is  decent mobile option for andirod users it provides lots of features",
+              "type": "text"
+            },
+            {
+              "key": "price",
+              "value": "600000",
+              "type": "text"
+            },
+            {
+              "key": "imageUrl",
+              "type": "file",
+              "src": "postman-cloud:///1f050110-3621-40f0-8cf4-036463864d82"
+            },
+            {
+              "key": "category",
+              "value": "electronics",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all products request",
+      "id": "726a983c-f4ed-4bf9-ae18-221dc98d1d5b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTE1MH0._MvLPs2nDp7pKT7DOz7aM1DysFhoQkbjSgbrFTTJIs4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTAxMH0.ugTepZzvRHN-u8VJ_TYbFWKttoG7r_TfB7EVcMalL50",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "Samsung S24 Ultra",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Samsung S24 is  decent mobile option for andirod users it provides lots of features",
+              "type": "text"
+            },
+            {
+              "key": "price",
+              "value": "600000",
+              "type": "text"
+            },
+            {
+              "key": "imageUrl",
+              "type": "file",
+              "src": "postman-cloud:///1f050110-3621-40f0-8cf4-036463864d82"
+            },
+            {
+              "key": "category",
+              "value": "electronics",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get single product request",
+      "id": "90800b7b-9cd3-4474-822b-7782345b5579",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTE1MH0._MvLPs2nDp7pKT7DOz7aM1DysFhoQkbjSgbrFTTJIs4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTAxMH0.ugTepZzvRHN-u8VJ_TYbFWKttoG7r_TfB7EVcMalL50",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "Samsung S24 Ultra",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Samsung S24 is  decent mobile option for andirod users it provides lots of features",
+              "type": "text"
+            },
+            {
+              "key": "price",
+              "value": "600000",
+              "type": "text"
+            },
+            {
+              "key": "imageUrl",
+              "type": "file",
+              "src": "postman-cloud:///1f050110-3621-40f0-8cf4-036463864d82"
+            },
+            {
+              "key": "category",
+              "value": "electronics",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products/68591790bba63c3b240b07f9",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "68591790bba63c3b240b07f9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update single product request ",
+      "id": "f6de4568-89d2-4b07-9007-6d66d8e0a659",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTE1MH0._MvLPs2nDp7pKT7DOz7aM1DysFhoQkbjSgbrFTTJIs4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTAxMH0.ugTepZzvRHN-u8VJ_TYbFWKttoG7r_TfB7EVcMalL50",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "Iphone 16 pro max",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "iphone 16 pro max is  decent mobile option for ios users it provides lots of features",
+              "type": "text"
+            },
+            {
+              "key": "price",
+              "value": "600000",
+              "type": "text"
+            },
+            {
+              "key": "imageUrl",
+              "type": "file",
+              "src": "postman-cloud:///1f0500d2-063b-4e50-b51a-49a3befd8be9"
+            },
+            {
+              "key": "category",
+              "value": "electronics",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products/68591790bba63c3b240b07f9",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "68591790bba63c3b240b07f9"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete single product request ",
+      "id": "60a8cb44-16f8-4625-b30b-1587d5128e5c",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTE1MH0._MvLPs2nDp7pKT7DOz7aM1DysFhoQkbjSgbrFTTJIs4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTAxMH0.ugTepZzvRHN-u8VJ_TYbFWKttoG7r_TfB7EVcMalL50",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "Iphone 16 pro max",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "iphone 16 pro max is  decent mobile option for ios users it provides lots of features",
+              "type": "text"
+            },
+            {
+              "key": "price",
+              "value": "600000",
+              "type": "text"
+            },
+            {
+              "key": "imageUrl",
+              "type": "file",
+              "src": "postman-cloud:///1f0500d2-063b-4e50-b51a-49a3befd8be9"
+            },
+            {
+              "key": "category",
+              "value": "electronics",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products/6859338fd5dbb324024b99e3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "6859338fd5dbb324024b99e3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create order request ",
+      "id": "89f4974c-f991-4628-a939-55de9739f29d",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTk0OGY2ODE5NmVmZjcwMjk2NmJmNiIsImlhdCI6MTc1MDY4MTg5NH0.ckulfVSXZ3TPz2-8r0O2U0aGDNwdaSmD6F5uBvBd8KU",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTAxMH0.ugTepZzvRHN-u8VJ_TYbFWKttoG7r_TfB7EVcMalL50",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"items\":[\r\n        {\r\n          \"productId\": \"68591790bba63c3b240b07f9\",\r\n          \"quantity\":1\r\n        },\r\n        {\r\n          \"productId\": \"685918e7bb1fb12cb9c51225\",\r\n          \"quantity\":1\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update user order request by admin",
+      "id": "70f58a85-6f8e-46dd-b8af-debe646406cd",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MDY4NTQ3Nn0.sDXwjL4TAWX6hw64sfCwoZe_XPitdq_b_w1VlRfOp58",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTgwY2M5NWU2N2Q1YzA5NDcxYzQ4MyIsImlhdCI6MTc1MDY2NTAxMH0.ugTepZzvRHN-u8VJ_TYbFWKttoG7r_TfB7EVcMalL50",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": \"shipped\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders/6859520e7d2c418bc7566ac3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "orders",
+            "6859520e7d2c418bc7566ac3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "db51fef1-5fd6-4f4e-a70c-ae47c859ad98",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
