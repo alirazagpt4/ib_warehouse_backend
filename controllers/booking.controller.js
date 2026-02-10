@@ -174,3 +174,27 @@ export const deleteBooking = async (req, res) => {
 };
 
 
+// Public Tracking Function
+export const trackBooking = async (req, res) => {
+    try {
+        const { trackingId } = req.params;
+
+        const booking = await Booking.findOne({
+            where: { trackingId: trackingId },
+            include: [{
+                model: Customer,
+                as: 'customerDetail',
+                attributes: ['name', 'brandName'] // Sirf zaroori data bhejein
+            }]
+        });
+
+        if (!booking) {
+            return res.status(404).json({ message: "Shipment not found" });
+        }
+
+        res.status(200).json(booking);
+    } catch (error) {
+        res.status(500).json({ message: "Server error", error: error.message });
+    }
+};
+

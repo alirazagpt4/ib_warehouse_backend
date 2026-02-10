@@ -553,6 +553,50 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "get booking by tracking No",
+          "id": "f57656a5-26b4-41cb-b5d2-9a80aeceb6f5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJ0ZXN0MUBnbWFpbC5jb20iLCJuYW1lIjoidGVzdDEiLCJpYXQiOjE3NzAzODY2NTh9.bZVY9hjs0URuoXEucIhuq6peb-tsee_iqMnhKVxTkIQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"customerId\": 2,\r\n    \"description\": \"3 Cartons of Apple iPhones - Origin: China (Air Freight)\",\r\n    \"weight\": 15.6,\r\n    \"volume\": \"0.5 CBM\",\r\n    \"noOfCartons\": 3,\r\n    \"hsCode\": \"8517.13\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bookings/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bookings",
+                "2"
+              ]
+            }
+          },
+          "response": []
         }
       ],
       "id": "81dc2313-d8ed-4892-aa16-17aef9bb76f9"

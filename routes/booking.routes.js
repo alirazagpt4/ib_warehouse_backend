@@ -1,5 +1,5 @@
 import express from "express";
-import {createBooking , getAllBookings , getBookingById, updateBooking , deleteBooking} from "../controllers/booking.controller.js";
+import {createBooking , getAllBookings , getBookingById, updateBooking , deleteBooking , trackBooking} from "../controllers/booking.controller.js";
 import { authMiddleware } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
@@ -10,4 +10,5 @@ router.get("/:id" , authMiddleware , getBookingById);
 router.patch("/:id" , authMiddleware , updateBooking);
 router.delete("/:id" , authMiddleware , deleteBooking);
 
+router.get("/track/:trackingId" , trackBooking);
 export default router
