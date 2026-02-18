@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/database.js";
-// import Customer from "./customer.model.js";
 
 const Booking = sequelize.define("Booking", {
     id: {
@@ -17,24 +16,48 @@ const Booking = sequelize.define("Booking", {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'customers', // Table name (lowercase)
+            model: 'customers', 
             key: 'id'
         }
     },
     description: {
-        type: DataTypes.TEXT,
+        type: DataTypes.TEXT, // Booking Description / Item
     },
     weight: {
-        type: DataTypes.DECIMAL(10, 2),
+        type: DataTypes.DECIMAL(10, 2), // Total item weight kgs
     },
-    volume: {
-        type: DataTypes.STRING,
+    cbm: {
+        type: DataTypes.DECIMAL(10, 3), // CBM = M3 (Cubic Meter)
+    },
+    rate: {
+        type: DataTypes.DECIMAL(10, 2), // Rate jo tasweer mein likha hai
     },
     noOfCartons: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.INTEGER, // Cartons Qty
+    },
+    pcsInBox: {
+        type: DataTypes.INTEGER, // Pcs in a box
+    },
+    totalPcs: {
+        type: DataTypes.INTEGER, // Total Pcs
+    },
+    otherItemDetails: {
+        type: DataTypes.TEXT, // Other Item Details
+    },
+    commentsRemarks: {
+        type: DataTypes.TEXT, // comments/Remarks
     },
     hsCode: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING, // HS Code
+    },
+    dutyWorking: {
+        type: DataTypes.TEXT, // Duty / Working
+    },
+    containerNo: {
+        type: DataTypes.STRING, // Container #
+    },
+    shippingCompany: {
+        type: DataTypes.STRING, // Shipping company
     },
     status: {
         type: DataTypes.INTEGER,
@@ -44,7 +67,5 @@ const Booking = sequelize.define("Booking", {
     tableName: 'bookings',
     timestamps: true
 });
-
-// Booking.belongsTo(Customer, { foreignKey: 'customerId', as: 'customers' });
 
 export default Booking;

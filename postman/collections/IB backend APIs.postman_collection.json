@@ -311,7 +311,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"customerId\": 2,\r\n    \"description\": \"3 Cartons of Apple iPhones - Origin: China (Air Freight)\",\r\n    \"weight\": 15.6,\r\n    \"volume\": \"0.5 CBM\",\r\n    \"noOfCartons\": 3,\r\n    \"hsCode\": \"8517.13\"\r\n}",
+              "raw": "{\r\n  \"customerId\": 2,\r\n  \"description\": \"Electric Motors / Items\",\r\n  \"weight\": 550.50,\r\n  \"cbm\": 3.45,\r\n  \"rate\": 450.00,\r\n  \"noOfCartons\": 20,\r\n  \"pcsInBox\": 2,\r\n  \"totalPcs\": 40,\r\n  \"otherItemDetails\": \"Model X-500, Industrial Grade\",\r\n  \"commentsRemarks\": \"Handle with care, keep dry\",\r\n  \"hsCode\": \"8501.10.00\",\r\n  \"dutyWorking\": \"5% Customs Duty Applied\",\r\n  \"containerNo\": \"MSCU1234567\",\r\n  \"shippingCompany\": \"Maersk Line\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -583,7 +583,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/bookings/2",
+              "raw": "http://localhost:3000/api/bookings/track/IB-C90C4B",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -592,7 +592,8 @@
               "path": [
                 "api",
                 "bookings",
-                "2"
+                "track",
+                "IB-C90C4B"
               ]
             }
           },

@@ -1,0 +1,60 @@
+{
+  "info": {
+    "_postman_id": "062b2fb2-f0ea-4da0-92d3-0592ac79018a",
+    "name": "API LIVE IB-BACKEND",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User module",
+      "item": [
+        {
+          "name": "User create api live",
+          "id": "8b37e9d6-6ae7-4b90-88c1-500f9a542ab7",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"test\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"test\",\r\n    \"role\":\"admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://194.163.190.100/api/users/register",
+              "protocol": "http",
+              "host": [
+                "194",
+                "163",
+                "190",
+                "100"
+              ],
+              "path": [
+                "api",
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "694a27ab-7d1f-4c96-9251-1fe62bbe9e7f"
+    },
+    {
+      "name": "Api testing",
+      "id": "acf69574-ffed-4ba0-aff7-292ddbc6e98a",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}

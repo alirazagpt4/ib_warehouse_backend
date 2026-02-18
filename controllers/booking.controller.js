@@ -5,13 +5,19 @@ import { Op } from "sequelize";
 
 export const createBooking = async (req, res) => {
 
-    const { customerId, description, weight, volume, noOfCartons, hsCode } = req.body;
+    const {
+        customerId, description, weight,
+        cbm, rate, noOfCartons, pcsInBox,
+        totalPcs, otherItemDetails, commentsRemarks,
+        hsCode, dutyWorking, containerNo, shippingCompany
+    } = req.body;
+
     try {
         const randomstr = crypto.randomBytes(3).toString('hex').toUpperCase();
         const trackingId = `IB-${randomstr}`;
 
-        if (!customerId || !description || !weight || !volume) {
-            return res.status(400).json({ message: "All fields are required" });
+        if (!customerId || !description || !weight || !cbm) {
+            return res.status(400).json({ message: "Customer, Description, Weight, and CBM are required" });
         }
 
         const existingBooking = await Booking.findOne({
@@ -22,17 +28,25 @@ export const createBooking = async (req, res) => {
         if (existingBooking) {
             return res.status(400).json({ message: "Booking already exists" });
         }
+
         const booking = await Booking.create({
             trackingId,
             customerId,
             description,
             weight,
-            volume,
+            cbm,
+            rate,
             noOfCartons,
+            pcsInBox,
+            totalPcs,
+            otherItemDetails,
+            commentsRemarks,
             hsCode,
+            dutyWorking,
+            containerNo,
+            shippingCompany,
             status: 1
         });
-
         return res.status(201).json({ message: "Booking created successfully", booking });
 
     } catch (error) {
@@ -44,10 +58,10 @@ export const createBooking = async (req, res) => {
 
 
 
-export const getAllBookings = async(req , res) =>{
+export const getAllBookings = async (req, res) => {
     try {
         // 1. Pagination aur Search query params se nikaalna
-        const {customerId} = req.query;
+        const { customerId } = req.query;
         const page = parseInt(req.query.page) || 1;
         const limit = parseInt(req.query.limit) || 10;
         const search = req.query.search || "";
@@ -62,7 +76,7 @@ export const getAllBookings = async(req , res) =>{
             ];
         }
 
-        if(customerId){
+        if (customerId) {
             whereClause.customerId = customerId;
         }
 
@@ -90,34 +104,34 @@ export const getAllBookings = async(req , res) =>{
 
     } catch (error) {
         console.log("Error fetching bookings:", error);
-        return res.status(500).json({ 
-            message: "Failed to get bookings", 
-            error: error.message 
+        return res.status(500).json({
+            message: "Failed to get bookings",
+            error: error.message
         });
     }
 
 }
 
 
-export const getBookingById = async(req , res) =>{
+export const getBookingById = async (req, res) => {
     try {
-        const {id} = req.params;
-        const booking = await Booking.findByPk(id , {
+        const { id } = req.params;
+        const booking = await Booking.findByPk(id, {
             include: [{
                 model: Customer,
                 as: 'customerDetail',
                 attributes: ['id', 'name', 'phone', 'brandName']
             }]
         });
-        if(!booking){
+        if (!booking) {
             return res.status(404).json({ message: "Booking not found" });
         }
         return res.status(200).json({ booking });
     } catch (error) {
         console.log("Error fetching booking:", error);
-        return res.status(500).json({ 
-            message: "Failed to get booking", 
-            error: error.message 
+        return res.status(500).json({
+            message: "Failed to get booking",
+            error: error.message
         });
     }
 }
